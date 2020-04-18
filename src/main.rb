@@ -4,8 +4,13 @@
 #   puts f
 # end
 
-require_relative './services/initializers/directory_changer'
+require_relative './services/initializers/move_to_workspace'
 require_relative './services/initializers/dependency_installer'
 
-Initializers::DirectoryChanger.call(ENV['GITHUB_WORKSPACE'])
-# DependencyInstaller.call
+require_relative './exceptions/missing_configuration'
+
+begin
+  Initializers::MoveToWorkspace.call(:GITHUB_WORKSPACE)
+rescue MissingConfiguration => e
+  puts "Missing configuration: #{e.missing_field}"
+end
