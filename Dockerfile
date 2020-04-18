@@ -24,5 +24,3 @@ FROM ruby:2.6.5
 COPY entrypoint.sh /action/rails-minitest-action/entrypoint.sh
 COPY src /action/rails-minitest-action
 ENTRYPOINT [ "/action/rails-minitest-action/entrypoint.sh" ]
-
-CMD [ "ruby", "/action/rails-minitest-action/main.rb" ]

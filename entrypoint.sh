@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ....
+set -e
 
 # Exec main process
-exec "$@"
+ruby /action/rails-minitest-action/main.rb
