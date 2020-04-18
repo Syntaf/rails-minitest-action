@@ -1,0 +1,16 @@
+name: 'Rails Test'
+description: 'Run rails tests with Minitest/Rspec'
+inputs:
+    ruby-version:
+        description: 'The version of ruby to run'
+        required: true
+        default: '2.6'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{ inputs.ruby-version }}
+
+env:
+    GITHUB_TOKEN: secrets.GITHUB_TOKEN
+
