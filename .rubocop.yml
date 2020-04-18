@@ -1,0 +1,7 @@
+AllCops:
+  Include:
+    - '**/*.rb'
+  TargetRubyVersion: 2.6
+
+Style/Documentation:
+  Enabled: false
