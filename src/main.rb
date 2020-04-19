@@ -12,8 +12,8 @@ require_relative './exceptions/missing_configuration'
 STDOUT.sync = true
 
 begin
-  Initializers::MoveToWorkspace.call(:GITHUB_WORKSPACE)
-  Initializers::RailsDependencyInstaller.call
+  Environment::MoveToWorkspace.call(:GITHUB_WORKSPACE)
+  Environment::RailsDependencyInstaller.call
 rescue MissingConfiguration => e
   puts "Missing configuration: #{e.missing_field}"
 end

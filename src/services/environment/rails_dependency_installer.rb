@@ -3,7 +3,7 @@
 require 'pty'
 require_relative './../service'
 
-module Initializers
+module Environment 
   class RailsDependencyInstaller < Service
     def call
       `bundle config path vendor/bundle && \

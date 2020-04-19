@@ -3,7 +3,7 @@
 require_relative './../service'
 require_relative './../../exceptions/missing_configuration'
 
-module Initializers
+module Environment 
   class MoveToWorkspace < Service
     def initialize(environment_key)
       @environment_key = environment_key
