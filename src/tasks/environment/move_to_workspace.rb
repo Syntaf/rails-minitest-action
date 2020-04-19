@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative './../service'
+require_relative './../task'
 require_relative './../../exceptions/missing_configuration'
 
-module Environment 
-  class MoveToWorkspace < Service
+module Environment
+  class MoveToWorkspace < Task
     def initialize(environment_key)
       @environment_key = environment_key
     end

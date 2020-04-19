@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative './services/environment/move_to_workspace'
-require_relative './services/environment/rails_dependency_installer'
-require_relative './services/database/create_test_database'
-require_relative './services/database/migrate_test_database'
+require_relative './tasks/environment/move_to_workspace'
+require_relative './tasks/environment/rails_dependency_installer'
+require_relative './tasks/database/create_test_database'
+require_relative './tasks/database/migrate_test_database'
 
 require_relative './exceptions/missing_configuration'
 
