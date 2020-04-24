@@ -5,11 +5,19 @@ inputs:
         description: 'The version of ruby to run'
         required: true
         default: '2.6'
+    database-url:
+        description: 'The URL to connect to your attached database service e.g. postgres://user@db/rails_test_action_example_test'
+        required: true
+    database-password:
+        description: 'The password of your database service'
+        require: true
 runs:
     using: 'docker'
     image: 'Dockerfile'
     args:
         - ${{ inputs.ruby-version }}
+        - ${{ inputs.database-url }}
+        - ${{ inputs.database-url }}
 
 env:
     GITHUB_TOKEN: secrets.GITHUB_TOKEN
