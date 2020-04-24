@@ -22,5 +22,6 @@ FROM ruby:2.6.5
 # ENTRYPOINT [ "entrypoint.sh" ]
 
 COPY entrypoint.sh /action/rails-minitest-action/entrypoint.sh
+RUN chmod +x /action/rails-minitest-action/entrypoint.sh
 COPY src /action/rails-minitest-action
 ENTRYPOINT [ "/action/rails-minitest-action/entrypoint.sh" ]
