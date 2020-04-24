@@ -2,7 +2,6 @@
 
 # rubocop:disable Lint/SuppressedException
 
-require 'English'
 require 'pty'
 
 class Task
@@ -14,14 +13,14 @@ class Task
     begin
       PTY.spawn(cmd) do |stdout, _stdin, pid|
         stdout.each { |line| puts line }
-
+      rescue Errno::EIO
+      ensure
         Process.wait(pid)
       end
-    rescue PTY::ChildExited, Errno::EIO
-      # no-op for non-fatal exceptions
+    rescue PTY::ChildExited
     end
 
-    $CHILD_STATUS.exitstatus
+    $?.exitstatus
   end
 end
 
