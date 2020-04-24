@@ -17,7 +17,7 @@ runs:
     args:
         - ${{ inputs.ruby-version }}
         - ${{ inputs.database-url }}
-        - ${{ inputs.database-url }}
+        - ${{ inputs.database-password }}
 
 env:
     GITHUB_TOKEN: secrets.GITHUB_TOKEN
