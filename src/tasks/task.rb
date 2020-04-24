@@ -2,6 +2,7 @@
 
 # rubocop:disable Lint/SuppressedException
 
+require 'English'
 require 'pty'
 
 class Task
