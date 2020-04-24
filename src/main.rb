@@ -17,7 +17,7 @@ begin
   Database::CreateTestDatabase.call
   Database::MigrateTestDatabase.call
 
-  Testing::RunTests.call
+  exit Testing::RunTests.call
 rescue MissingConfiguration => e
   puts "Missing configuration: #{e.missing_field}"
 end

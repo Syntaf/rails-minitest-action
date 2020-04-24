@@ -12,6 +12,8 @@ class Task
   def shell(cmd)
     PTY.spawn(cmd) do |stdout, _stdin, _pid|
       stdout.each { |line| puts line }
+
+      Process.wait(_pid)
     end
   rescue PTY::ChildExited, Errno::EIO
   end
