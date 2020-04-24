@@ -9,7 +9,6 @@ module Testing
     def call
       puts 'Running tests...'
       shell('bundle exec rails test')
-      $CHILD_STATUS.exitstatus
     end
   end
 end
