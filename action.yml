@@ -1,10 +1,6 @@
 name: 'Rails Test'
 description: 'Run rails tests with Minitest/Rspec'
 inputs:
-    ruby-version:
-        description: 'The version of ruby to run'
-        required: true
-        default: '2.6'
     database-url:
         description: 'The URL to connect to your attached database service e.g. postgres://user@db/rails_test_action_example_test'
         required: true
@@ -15,7 +11,6 @@ runs:
     using: 'docker'
     image: 'Dockerfile'
     args:
-        - ${{ inputs.ruby-version }}
         - ${{ inputs.database-url }}
         - ${{ inputs.database-password }}
 
