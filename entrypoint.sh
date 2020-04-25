@@ -3,6 +3,8 @@
 # Exit immeditely once script is finished
 set -e
 
+echo $PATH
+
 # Export action inputs as environment variables
 export DATABASE_URL=$2
 export DATABASE_PASSWORD=$3
