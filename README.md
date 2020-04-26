@@ -1,5 +1,5 @@
 # rails-test-action
-A github action for running rails tests.
+A github action for running rails tests. Not meant to be taken seriously, just me having some fun with POROs and shell commands in Ruby
 
 
 ## Usage
